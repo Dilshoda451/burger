@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgb(255, 244, 244);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.content h2 {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  color: rgb(108, 0, 0);
+}
+
+.workingHour-H {
+  margin-bottom: 5px;
+  display: none;
+}
+
+.workingHour-P {
+  margin-top: 20px;
+  display: none;
+}
+
+.food-cards {
+  padding-bottom: 50px;
+  height: 90%;
+  overflow: auto;
+}
+
+.card {
+  margin: 35px;
+  background-color: rgb(252, 226, 226);
+  padding-bottom: 10px;
+  width: 350px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px #33363aa0;
+}
+
+.card:hover {
+  scale: 105%;
+  transition: 500ms ease;
+}
+
+img {
+  object-fit: cover;
+}
+
+.foodLine {
+  padding-bottom: 8px;
+}
+
+.foodCR {
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+}
+
+.revomeBtn {
+  padding: 0 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+}
+
+.revomeBtn:active {
+  scale: 0.9;
+}
+
+.total-div {
+  text-shadow: 0 0 10px black;
+  color: #eeff00;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.foodLine {
+  width: 115%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* # */
+
+.card img {
+  height: 220px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.459);
+  background-color: #fff;
+  width: 100%;
+}
+
+.card-items {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.card-items h3 {
+  text-align: center;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+}
+
+.card-items i {
+  text-align: start;
+  padding-bottom: 5px;
+
+  /* background-color: blue; */
+}
+
+.price {
+  color: green;
+}
+
+.card-items p {
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
+
+.card button {
+  font-size: 1.1rem;
+  background-color: rgba(110, 0, 0, 0.774);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 10px;
+}
+
+.card button:active {
+  scale: 0.95;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 12px 12px;
+}
+
+.add-to-cart {
+  margin-left: 20px;
+  width: 50%;
+}
+
+.count-btn {
+  margin-left: 8px;
+  width: 70px;
+}
+
+.wrong {
+  border: 1px solid red;
+}
+
+.WrongInputName {
+  display: none;
+  color: red;
+}
+.WrongInputNumber {
+  display: none;
+  color: red;
+}
+
+.reload {
+  border-radius: 50px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  width: 120px;
+  border: 1px solid white;
+  background-color: rgb(108, 0, 0);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.reload:active {
+  scale: 0.95;
+}
+
+.loading {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spin {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(108, 0, 0);
+  background-image: url("/pictures/background.png");
+}
+
+.success {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(108, 0, 0);
+  background-image: url("/pictures/background.png");
+  z-index: 1;
+}
+
+.success h2 {
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #eeff00;
+  text-shadow: 0 0 10px rgb(112, 112, 112);
+}
+
+.success a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .foodLine {
+    padding: 4px 110px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .foodLine {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .card {
+    width: 300px;
+  }
+
+  .add-to-cart {
+    /* margin-left: 20px; */
+    margin-left: 8px;
+    width: 70%;
+  }
+
+  .count-btn {
+    margin-left: 5px;
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .foodLine {
+    padding-left: 8px;
+    font-size: 0.7rem;
+  }
+}

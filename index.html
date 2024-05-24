@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/side-bar.css" />
+    <link rel="stylesheet" href="./style/content.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mazzali Burger</title>
+  </head>
+  <body>
+    <!--navbar  -->
+
+    <div class="navbar">
+      <!--side-bar  -->
+      <div class="side-bar">
+        <header class="side-bar-header">
+          <!--close-btn -->
+          <div class="close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <!--logo -->
+          <img src="./pictures/logo.png" alt="" />
+          <h1>MENU</h1>
+          <!--menu items -->
+        </header>
+        <!-- <div class="side-bar-content"> -->
+        <div class="menu">
+          <div data-id="0" class="item">LAVASH</div>
+          <div data-id="1" class="item">PITSA</div>
+          <div data-id="2" class="item">GAMBURGET</div>
+          <div data-id="3" class="item">HOT DOG</div>
+          <div data-id="4" class="item">ICHIMLIKLAR</div>
+        </div>
+        <!-- <div class="side-bar-content"> -->
+        <div class="side-bar-content">
+          <hr class="hr" />
+          <div class="adress">
+            <h4>Manzil:</h4>
+            <p>Chortoq "Imkon kredit" savdo markazi yonida</p>
+            <br />
+            <h4>Telefon:</h4>
+            <p>+998 99 123 45 67</p>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+
+      <!--navbar items -->
+      <div class="nav-items">
+        <!--menu-btn  -->
+        <i class="menu-btn fas fa-bars"></i>
+
+        <h2>Mazzali Burger</h2>
+
+        <!--navbar cart -->
+        <div class="cart">
+          <i class="fa-solid fa-cart-plus fa-lg"></i>
+          <div class="cart-count"></div>
+        </div>
+
+        <!-- order card -->
+
+        <div class="cart-overlay hidden">
+          <div class="cart-content">
+            <div class="spin">
+              <img
+                class="loading"
+                src="./pictures/spins/spin1.gif"
+                alt="loading"
+              />
+            </div>
+            <div class="success">
+              <h2>Buyurtma yuborildi!</h2>
+              <button class="reload">
+                <a href=""> Bosh sahifa</a>
+              </button>
+            </div>
+            <i class="fas fa-times close-shoping-card"></i>
+
+            <h2>Buyurtmalar</h2>
+            <div class="shoping-cart-items"></div>
+            <div class="form-div">
+              <form class="form">
+                <div class="total-div">
+                  Jami:&nbsp
+                  <p class="total"></p>
+                  <span>&nbsp sum</span>
+                </div>
+
+                <input type="text" class="text-input" placeholder="Ismingiz" />
+                <p class="WrongInputName">Ismingizni to'g'ri kiriting!</p>
+
+                <input
+                  type="number"
+                  class="number-input"
+                  placeholder="Telefon raqamingiz"
+                />
+                <p class="WrongInputNumber">
+                  Telefon raqamingizni to'g'ri kiriting!
+                </p>
+
+                <textarea
+                  placeholder="Qo'shimcha o'zgartirish (masalan: ketchup solinmasin)"
+                  name=""
+                  class="textarea"
+                  cols="30"
+                  rows="3"
+                ></textarea>
+                <button class="submit-btn">Tasdiqlash</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="content">
+      <div class="food-cards"></div>
+    </div>
+
+    <script src="./script/add-remove-calsses.js"></script>
+    <script src="./script/foods.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/send-message.js"></script>
+  </body>
+</html>
